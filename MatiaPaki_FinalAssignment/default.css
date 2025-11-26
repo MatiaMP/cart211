@@ -128,6 +128,7 @@ article h2 {
     box-shadow: 0 0 12px #00ff88;
 }
 
+
 footer {
     padding: 40px 0;
     margin-top: 60px;
@@ -246,12 +247,75 @@ footer {
     transition: opacity 0.3s;
 }
 
+
 .piece:hover .hover-text {
     opacity: 1;
 }
+
+.hamburger-menu {
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.hamburger-menu button {
+    background: none;
+    border: none;
+    font-size: 2em;
+    color: grey;
+}
+
+.hamburger-menu button .fa-bars {
+    cursor: pointer;
+}
+
 @media (max-width: 600px) {
     .menu1 {
+        display: none;
         flex-direction: column;
         gap: 12px;
     }
+
+    .menu1.menu-deployed {
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    article h1 {
+        font-size: 48px; 
+        margin-top: 10px;
+    }
+    article p {
+        font-size: 14px;
+        line-height: 1.6;
+        padding: 0 10px;
+    }
+
+ .continue-btn {
+        padding: 10px 16px;
+        font-size: 16px;
+        max-width: 240px;
+    }
+    nav {
+        padding: 8px 0;
+        margin-bottom: 20px;
+    }
+    .art-gallery {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .art-piece {
+        max-width: 220px;
+    }
+     .signup-form {
+        max-width: 270px;
+        margin-top: 20px;
+    }
+    
 }
+

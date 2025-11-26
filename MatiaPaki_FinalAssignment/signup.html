@@ -13,6 +13,9 @@
      <!--External Stylesheet-->
     <link rel="stylesheet" href="default.css">
 
+    <!--Hamburger Menu-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
     <div id="wrapper">
@@ -24,7 +27,7 @@
 
                     <a href="index.html" class="menuI">Welcome</a>
                     <a href="terms.html" class="menuI">Terms & Conditions</a>
-                    <a href="signup.html" class="menuI_active">Signup</a>
+                    <a href="signup.html" class="menuI_active">Sign In</a>
                     <a href="data.html" class="menuI">Data Repository</a>
                     <a href="gallery.html" class="menuI">Art Gallery</a>
                     <a href="gallery2.html" class="menuI">Art Gallery 2</a>
@@ -33,6 +36,12 @@
                     <a href="continue.html" class="menuI">Continue</a>
                     <a href="final.html" class="menuI">Final</a>
                 </div>
+                <div class="hamburger-menu">
+    <button>
+        <span class="fa fa-bars"></span>
+    </button>
+</div>
+
             </nav>
         </header>
         <section>
@@ -85,6 +94,24 @@ document.addEventListener('DOMContentLoaded', () => {
     window.location.href = 'data.html';
 });
 </script>
+
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburgerButton = document.querySelector('.hamburger-menu button');
+            const closeButton = document.querySelector('.close-menu');
+            const menu1 = document.querySelector('.menu1');
+
+            // Gestion de l'ouverture du menu
+            hamburgerButton.addEventListener('click', () => {
+                menu1.classList.add('menu-deployed');
+            });
+
+            // Gestion de la fermeture du menu
+            closeButton.addEventListener('click', () => {
+                menu1.classList.remove('menu-deployed');
+            });
+        });
+    </script>
 
 </body>
 </html>

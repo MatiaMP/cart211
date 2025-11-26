@@ -9,6 +9,10 @@
 
     <title>Art Gallery — Artist Simulation</title>
     <link rel="stylesheet" href="default.css">
+
+    <!--Hamburger Menu-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body>
@@ -27,6 +31,12 @@
             <a href="continue.html" class="menuI_active">Continue</a>
             <a href="final.html" class="menuI">Final</a>
         </div>
+        <div class="hamburger-menu">
+    <button>
+        <span class="fa fa-bars"></span>
+    </button>
+</div>
+
     </nav>
 </header>
 
@@ -110,6 +120,23 @@
         <small><em>© Matia Paki, CART 211, Fall 2025, Final Assignment</em></small>
     </div>
 </footer>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburgerButton = document.querySelector('.hamburger-menu button');
+            const closeButton = document.querySelector('.close-menu');
+            const menu1 = document.querySelector('.menu1');
+
+            // Gestion de l'ouverture du menu
+            hamburgerButton.addEventListener('click', () => {
+                menu1.classList.add('menu-deployed');
+            });
+
+            // Gestion de la fermeture du menu
+            closeButton.addEventListener('click', () => {
+                menu1.classList.remove('menu-deployed');
+            });
+        });
+    </script>
 </div>
 
 </body>
