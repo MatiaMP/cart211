@@ -22,9 +22,9 @@
                 <div class="menu1">
                     <button class="close-menu">&times;</button>
 
-                    <a href="index.html" class="menuI_active">Welcome</a>
+                    <a href="index.html" class="menuI">Welcome</a>
                     <a href="terms.html" class="menuI">Terms & Conditions</a>
-                    <a href="signup.html" class="menuI">Signup</a>
+                    <a href="signup.html" class="menuI_active">Signup</a>
                     <a href="data.html" class="menuI">Data Repository</a>
                     <a href="gallery.html" class="menuI">Art Gallery</a>
                     <a href="gallery2.html" class="menuI">Art Gallery 2</a>
@@ -37,12 +37,33 @@
         </header>
         <section>
             <article>
-                <h1>WELCOME</h1>
-                <p>
-                    Welcome to The Simulation. You will experience a simulation of an artist fighting against algorithmic flattening, with a visual and abstract artistic experience. Preferably do not use the navigation bar for best immersion.
-                </p>
-                <a class="continue-btn" href="terms.html">Continue →</a>
-            </article>
+                <h1>SIGN IN</h1>
+
+<form id="signup-form" class="signup-form">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+
+        <label for="user-id">User ID:</label>
+        <input type="text" id="user-id" name="user-id" required placeholder="Enter your User ID">
+
+        <label for="occupation">Occupation:</label>
+        <select id="occupation" name="occupation" required>
+        <option value="artist" selected>Artist</option>
+        </select>
+
+        <button type="submit" class="continue-btn">Submit →</button>
+</form>
+
+        <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const name = localStorage.getItem('name');
+    const userId = localStorage.getItem('userId');
+    const occupation = localStorage.getItem('occupation');
+
+});
+</script>
+        
+</article>
         </section>
     <!--Footer-->
         <footer>
@@ -51,5 +72,19 @@
         </footer>
 
     </div>
+    <script>
+    document.getElementById('signup-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+
+    localStorage.setItem('name', document.getElementById('name').value);
+    localStorage.setItem('userId', document.getElementById('user-id').value);
+    localStorage.setItem('occupation', document.getElementById('occupation').value);
+
+ 
+    window.location.href = 'data.html';
+});
+</script>
+
 </body>
 </html>
